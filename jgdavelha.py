@@ -7,7 +7,7 @@ malha = [
 ]
 
 player1 = "  X  "
-player2 = "  0  "
+player2 = "  O  "
 
 while True:
     print("    1       2       3")
