@@ -7,11 +7,16 @@ malha = [
     ["     ", "     ", "     "]
 ]
 
-player1 = "  X  "
-player2 = "  O  "
+PLAYER1 = "  X  "
+PLAYER2 = "  O  "
 
 
 def checkwin(var):
+
+    """
+    Funçao pra checar se o jogador venceu
+    """
+
     if malha[0][0] == malha[1][1] == malha[2][2] == var:
         print(f"O jogador {var.strip()} venceu")
         sys.exit()
@@ -58,7 +63,7 @@ while True:
                 print("\nLocalização inválida\n")
 
             elif malha[linha-1][coluna-1] == "     ":
-                malha[linha-1][coluna-1] = player1
+                malha[linha-1][coluna-1] = PLAYER1
                 os.system('cls')
                 break
 
@@ -68,7 +73,7 @@ while True:
         except ValueError:
             print("Caracter inválido")
 
-    checkwin(player1)
+    checkwin(PLAYER1)
 
     print("    1       2       3")
     print(f"1 {malha[0][0]} | {malha[0][1]} | {malha[0][2]} ")
@@ -90,7 +95,7 @@ while True:
                 print("\nLocalização inválida\n")
 
             elif malha[linha2-1][coluna2-1] == "     ":
-                malha[linha2-1][coluna2-1] = player2
+                malha[linha2-1][coluna2-1] = PLAYER2
                 os.system('cls')
                 break
 
@@ -100,4 +105,4 @@ while True:
         except ValueError:
             print("Caracter inválido")
 
-    checkwin(player2)
+    checkwin(PLAYER2)
