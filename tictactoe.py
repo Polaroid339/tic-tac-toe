@@ -58,7 +58,7 @@ while True:
             if (linha) > 3 or (coluna) > 3:
                 print("\nLocalização inválida\n")
 
-            elif (linha) == 0 or (coluna) == 0:
+            elif (linha) <= 0 or (coluna) <= 0:
 
                 print("\nLocalização inválida\n")
 
